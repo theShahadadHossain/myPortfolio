@@ -1,46 +1,73 @@
 import { NavLink } from "react-router";
 import myImg from "../../../assets/banner/bannerImg.png";
+import myNewImg from "../../../assets/banner/profile.png";
 import { PiFilesFill } from "react-icons/pi";
-import { FaPaperPlane } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaPaperPlane } from "react-icons/fa";
+import "./Banner.css";
+import { useEffect, useRef } from "react";
+import { FaSquareWhatsapp } from "react-icons/fa6";
+import { GoArrowRight } from "react-icons/go";
+import gmail from "../../../assets/banner/gmail_logo.png";
 
 const Banner = () => {
+  const imgRef = useRef(null);
+
+  // useEffect(() => {
+  //   const handleMouseMove = (event) => {
+  //     if (imgRef.current) {
+  //       imgRef.current.style.position = "absolute";
+  //       imgRef.current.style.top = event.clientX + "px";
+  //       imgRef.current.style.left = event.clientX + "px";
+  //     }
+  //   };
+
+  //   document.addEventListener("mousemove", handleMouseMove);
+
+  //   return () => {
+  //     document.addEventListener("mousemove", handleMouseMove);
+  //   };
+  // }, []);
+
   return (
-    <div className="flex flex-col justify-center items-center max-w-7xl mx-auto select-none h-[81vh] text-gray-500">
-      <div className="relative w-full">
-        <div>
-          <h3 className="text-4xl text-center font-medium lowercase">
-            Hi, My name is Shahadad Hossain and i am a
-          </h3>
-          <h1 className="uppercase font-black text-[160px] absolute w-full text-gray-800 top-20">
-            Web Developer
+    <div className="max-w-7xl mx-auto select-none text-[#171717]">
+      <div className="2xl:py-20">
+        <div className="pb-12 text-center">
+          <h1 className="text-8xl text-center font-extrabold leading-20 tracking-tight">
+            I Build Websites That <br />{" "}
+            <span className="text-[#FF3737] font-black">Never</span> Break
           </h1>
-          <h5 className="absolute right-8 top-66 text-2xl">from Bangladesh.</h5>
+          <p className="py-5 text-2xl">
+            High-performing websites designed to grow your business
+          </p>
         </div>
-        <div className="flex justify-center">
-          <img src={myImg} className="scale-150 z-0" alt="Personal Image" />
-          <div className="absolute inset-0 blur-3xl w-full bg-white/30 -bottom-36 mt-96 z-10"></div>
+
+        <div className="flex justify-center items-center gap-8">
+          <h3 className="bg-[#171717] text-white px-6 py-4 rounded-lg flex items-center text-xl gap-4 cursor-pointer">
+            Book your website
+            <GoArrowRight className="text-3xl rotate-90" />
+          </h3>
         </div>
-        <div className="flex flex-row justify-center">
-          <div className="z-20 absolute bottom-0">
-            <div className="flex gap-5 text-lg">
-              <NavLink to={"/project"}>
-                <button className="px-14 py-5 bg-gray-800 rounded-xl text-white z-50 cursor-pointer hover:underline border-2 border-gray-800">
-                  <span className="flex items-center gap-2">
-                    <PiFilesFill className="text-3xl animate-bounce" />
-                    Explore Projects
-                  </span>
-                </button>
-              </NavLink>
-              <NavLink to={"/contact"}>
-                <button className="px-14 py-5 bg-white rounded-xl text-gray-900 z-50 border-2 border-gray-900 cursor-pointer hover:underline">
-                  <span className="flex items-center gap-2">
-                    <FaPaperPlane className="text-2xl animate-bounce" />
-                    Start a project
-                  </span>
-                </button>
-              </NavLink>
-            </div>
-          </div>
+        <div className="flex justify-center items-center gap-2 py-4">
+          <button>
+            <NavLink>
+              <FaSquareWhatsapp className="w-14 h-14 text-[#25d366]" />
+            </NavLink>
+          </button>
+          <button>
+            <NavLink to={"https://www.linkedin.com/in/shahadad/"}>
+              <FaLinkedin className="w-14 h-13 text-[#0077B5]" />
+            </NavLink>
+          </button>
+          <button>
+            <NavLink to={"https://www.linkedin.com/in/shahadad/"}>
+              <FaFacebook className="w-14 h-13 text-[#1877F2]" />
+            </NavLink>
+          </button>
+          <button>
+            <NavLink>
+              <img src={gmail} className="w-16.5 h-17" alt="" />
+            </NavLink>
+          </button>
         </div>
       </div>
     </div>
