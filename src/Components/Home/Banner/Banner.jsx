@@ -47,27 +47,46 @@ const Banner = () => {
             <GoArrowRight className="text-3xl rotate-90" />
           </h3>
         </div>
-        <div className="flex justify-center items-center gap-2 py-4">
-          <button>
-            <NavLink>
-              <FaSquareWhatsapp className="w-14 h-14 text-[#25d366]" />
-            </NavLink>
-          </button>
-          <button>
-            <NavLink to={"https://www.linkedin.com/in/shahadad/"}>
-              <FaLinkedin className="w-14 h-13 text-[#0077B5]" />
-            </NavLink>
-          </button>
-          <button>
-            <NavLink to={"https://www.linkedin.com/in/shahadad/"}>
-              <FaFacebook className="w-14 h-13 text-[#1877F2]" />
-            </NavLink>
-          </button>
-          <button>
-            <NavLink>
-              <img src={gmail} className="w-16.5 h-17" alt="" />
-            </NavLink>
-          </button>
+        <div className="flex justify-center items-center gap-4 py-4">
+          <NavLink
+            to="https://wa.me/8801690103374"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 duration-300 transition-transform"
+          >
+            <FaSquareWhatsapp className="w-12 h-12 text-[#25D366]" />
+          </NavLink>
+
+          <NavLink
+            to="https://www.linkedin.com/in/shahadad/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 duration-300  transition-transform"
+          >
+            <FaLinkedin className="w-12 h-12 text-[#0077B5]" />
+          </NavLink>
+
+          <NavLink
+            to="https://www.facebook.com/theShahadadHossain"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 duration-300  transition-transform"
+          >
+            <FaFacebook className="w-12 h-12 text-[#1877F2]" />
+          </NavLink>
+
+          <NavLink
+            to="https://mail.google.com/mail/?view=cm&fs=1&to=regular.shahadad@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-110 duration-300  transition-transform"
+          >
+            <img
+              src={gmail}
+              alt="Email Shahadad"
+              className="w-15 h-15 rounded-2xl backdrop-blur-2xl"
+            />
+          </NavLink>
         </div>
       </div>
     </div>

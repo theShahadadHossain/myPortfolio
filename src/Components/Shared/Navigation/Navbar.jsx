@@ -1,12 +1,12 @@
 import { NavLink } from "react-router";
-import logo from "../../../assets/logo/mainLogo.png";
+import logo from "../../../assets/logo/new_logo.jpg";
 import { FaPaperPlane } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <div className="backdrop-blur-lg">
       <nav className="text-[#171717] max-w-7xl mx-auto">
-        <div className="flex items-center justify-evenly w-full -mt-12">
+        <div className="flex items-center justify-evenly w-full">
           <div className="lg:w-2/12">
             <img src={logo} alt="" />
           </div>
