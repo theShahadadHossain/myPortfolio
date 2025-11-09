@@ -16,6 +16,7 @@ const Contact = () => {
           <div className="w-28 h-[1px] bg-black"></div>{" "}
         </div>
 
+        {/* Social */}
         <div className="flex justify-center items-center md:gap-[10px] gap-2 py-0 my-0">
           <NavLink
             to="https://www.linkedin.com/in/shahadad/"

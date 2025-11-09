@@ -4,7 +4,7 @@ import logo from "../../../assets/logo/bg-logo.png";
 
 import { getCalApi } from "@calcom/embed-react";
 import Contact from "./Contact";
-import HighlightNumber from "../../Shared/Highlight/HighlightNumber";
+import { motion } from "framer-motion";
 
 const Banner = () => {
   useEffect(() => {
@@ -37,11 +37,27 @@ const Banner = () => {
           <img className="scale-50 h-32 object-cover" src={logo} alt="" />
         </div>
         <div className="text-center pt-14">
-          <h1 className="2xl:text-7xl lg:text-7xl md:text-6xl text-4xl text-center font-black 2xl:leading-30 lg:leading-16 md:leading-14 leading-9 tracking-tight text-[#121212] highlight-text">
+          <h1 className="2xl:text-7xl lg:text-7xl md:text-6xl text-4xl text-center font-black 2xl:leading-[7rem] lg:leading-[5rem] md:leading-[4rem] leading-[2.5rem] tracking-tight text-[#121212] highlight-text">
             I Build Functional,{" "}
-            <span className="text-[#FF3737] font-black"> Responsive </span>{" "}
-            <br /> Website That
-            <span className="text-[#FF3737] font-black"> Never</span> Break
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="text-[#FF3737] font-black inline-block"
+            >
+              Responsive
+            </motion.span>{" "}
+            <br />
+            Website That{" "}
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              className="text-[#398AFE] font-black inline-block"
+            >
+              Never
+            </motion.span>{" "}
+            Break
           </h1>
           <p className="md:pt-4 pt-4 2xl:text-2xl md:text-lg text-sm 2xl:leading-8 md:leading-6">
             Clean Code, Responsive, Functional &

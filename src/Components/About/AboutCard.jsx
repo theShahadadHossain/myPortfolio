@@ -10,7 +10,7 @@ const AboutCard = () => {
             <div>
               <img
                 src={profile}
-                className="rounded-full w-44 p-1 border-4 border-[#FF3737]"
+                className="rounded-full w-44 p-1 border-4 border-[#398AFE]"
                 alt=""
               />
             </div>
