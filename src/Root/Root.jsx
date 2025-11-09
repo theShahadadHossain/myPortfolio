@@ -11,7 +11,7 @@ const Root = () => {
   return (
     <div className="bg-[#F9FAFB] h-fit">
       <div className="">
-        {/* <Navbar></Navbar> */}
+        <Navbar></Navbar>
         <Outlet></Outlet>
       </div>
     </div>

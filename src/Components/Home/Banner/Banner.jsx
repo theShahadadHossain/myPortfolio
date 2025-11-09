@@ -2,15 +2,33 @@ import { NavLink } from "react-router";
 import myImg from "../../../assets/banner/bannerImg.png";
 import myNewImg from "../../../assets/banner/profile.png";
 import { PiFilesFill } from "react-icons/pi";
-import { FaFacebook, FaLinkedin, FaPaperPlane } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaPaperPlane,
+  FaTelegram,
+} from "react-icons/fa";
 import "./Banner.css";
 import { useEffect, useRef } from "react";
 import { FaSquareWhatsapp } from "react-icons/fa6";
-import { GoArrowRight } from "react-icons/go";
+import { GoArrowRight, GoPlus } from "react-icons/go";
 import gmail from "../../../assets/banner/gmail_logo.png";
+import logo from "../../../assets/logo/bg-logo.png";
+import meet from "../../../assets/banner/googlemeet.png";
+import profile from "../../../assets/banner/currentProfile.jpg";
+
+import { getCalApi } from "@calcom/embed-react";
+import Contact from "./Contact";
+import Highlight from "./Highlight";
 
 const Banner = () => {
   const imgRef = useRef(null);
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
 
   // useEffect(() => {
   //   const handleMouseMove = (event) => {
@@ -29,64 +47,26 @@ const Banner = () => {
   // }, []);
 
   return (
-    <div className="max-w-7xl mx-auto select-none text-[#171717]">
-      <div className="2xl:py-20">
-        <div className="pb-12 text-center">
-          <h1 className="text-8xl text-center font-extrabold leading-20 tracking-tight">
+    <div className="max-w-7xl mx-auto select-none text-[#171717] flex justify-center items-center">
+      <div className="">
+        <div className="flex justify-center">
+          <img className="scale-50 md:-mt-8 -mt-12" src={logo} alt="" />
+        </div>
+        <div className="text-center">
+          <h1 className="2xl:text-8xl lg:text-7xl md:text-6xl text-4xl text-center font-black 2xl:leading-22 lg:leading-16 md:leading-14 leading-9 tracking-tight">
             I Build Websites That <br />{" "}
             <span className="text-[#FF3737] font-black">Never</span> Break
           </h1>
-          <p className="py-5 text-2xl">
-            High-performing websites designed to grow your business
+          <p className="md:pt-5 pt-4 2xl:text-2xl md:text-lg text-sm 2xl:leading-8 md:leading-6">
+            Clean Code, Responsive, Functional &
+            <br /> High-performing websites designed to grow your business.
           </p>
         </div>
 
-        <div className="flex justify-center items-center gap-8">
-          <h3 className="bg-[#171717] text-white px-6 py-4 rounded-lg flex items-center text-xl gap-4 cursor-pointer">
-            Book your website
-            <GoArrowRight className="text-3xl rotate-90" />
-          </h3>
-        </div>
-        <div className="flex justify-center items-center gap-4 py-4">
-          <NavLink
-            to="https://wa.me/8801690103374"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-110 duration-300 transition-transform"
-          >
-            <FaSquareWhatsapp className="w-12 h-12 text-[#25D366]" />
-          </NavLink>
-
-          <NavLink
-            to="https://www.linkedin.com/in/shahadad/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-110 duration-300  transition-transform"
-          >
-            <FaLinkedin className="w-12 h-12 text-[#0077B5]" />
-          </NavLink>
-
-          <NavLink
-            to="https://www.facebook.com/theShahadadHossain"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-110 duration-300  transition-transform"
-          >
-            <FaFacebook className="w-12 h-12 text-[#1877F2]" />
-          </NavLink>
-
-          <NavLink
-            to="https://mail.google.com/mail/?view=cm&fs=1&to=regular.shahadad@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:scale-110 duration-300  transition-transform"
-          >
-            <img
-              src={gmail}
-              alt="Email Shahadad"
-              className="w-15 h-15 rounded-2xl backdrop-blur-2xl"
-            />
-          </NavLink>
+        {/* Book meeting */}
+        <div className="">
+          <Highlight></Highlight>
+          <Contact></Contact>
         </div>
       </div>
     </div>

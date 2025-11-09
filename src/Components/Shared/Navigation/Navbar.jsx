@@ -1,38 +1,44 @@
-import { NavLink } from "react-router";
-import logo from "../../../assets/logo/new_logo.jpg";
-import { FaPaperPlane } from "react-icons/fa";
+import { NavLink, useLocation } from "react-router";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const links = [
+    { path: "/", label: "Shahadad" },
+    { path: "/project", label: "Project" },
+  ];
+
   return (
-    <div className="backdrop-blur-lg">
-      <nav className="text-[#171717] max-w-7xl mx-auto">
-        <div className="flex items-center justify-evenly w-full">
-          <div className="lg:w-2/12">
-            <img src={logo} alt="" />
-          </div>
-          <div className="lg:w-10/12 text-left">
-            <ul className="flex items-center justify-end gap-16 text-xl font-medium">
-              <NavLink to={"/"}>
-                <li className="text-[#171717] cursor-pointer">Home</li>
+    <div className="flex justify-center items-center">
+      <nav className="fixed 2xl:bottom-14 xl:bottom-16 md:bottom-14 bottom-12 z-10">
+        <ul className="relative flex items-center px-1 py-1 rounded-2xl text-lg font-medium bg-[#171717]">
+          {links.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <NavLink key={link.path} to={link.path} className="relative">
+                <li
+                  className={`relative z-10 cursor-pointer uppercase md:px-10 px-8 md:py-4 py-3 rounded-xl ${
+                    isActive ? "text-[#171717]" : "text-white/90"
+                  }`}
+                >
+                  {isActive && (
+                    <motion.div
+                      layoutId="active-pill"
+                      className="absolute inset-0 bg-white/90 rounded-xl"
+                      transition={{
+                        type: "spring",
+                        stiffness: 350,
+                        damping: 35,
+                      }}
+                    />
+                  )}
+                  <span className="relative z-10">{link.label}</span>
+                </li>
               </NavLink>
-              <NavLink to={"/project"}>
-                <li className="text-[#171717] cursor-pointer">Project</li>
-              </NavLink>
-              <NavLink to={"/about"}>
-                <li className="text-[#171717] cursor-pointer">About</li>
-              </NavLink>
-              <NavLink to={"contact"}>
-                <button className="bg-[#171717] text-white px-12 py-4 rounded-xl hover:text-white transition-all duration-700 cursor-pointer hover:px-14 inline-block hover:underline">
-                  <span className="flex items-center gap-2">
-                    Message
-                    <FaPaperPlane className="text-2xl animate-pulse" />
-                  </span>
-                </button>
-              </NavLink>
-            </ul>
-          </div>
-        </div>
-        {/* <hr className="w-10/12 mx-auto -mt-12" /> */}
+            );
+          })}
+        </ul>
       </nav>
     </div>
   );
