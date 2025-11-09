@@ -7,7 +7,7 @@ import { GoArrowRight } from "react-icons/go";
 
 const Contact = () => {
   return (
-    <div className="pt-10">
+    <div className="pt-16">
       <div className="flex flex-col justify-center items-center gap-2">
         <div className="flex justify-center items-center">
           <button
