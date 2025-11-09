@@ -1,35 +1,14 @@
 import { FaLinkedin, FaTelegram } from "react-icons/fa";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import { NavLink } from "react-router";
-import meet from "../../../assets/banner/googlemeet.png";
 import gmail from "../../../assets/banner/gmail_logo.png";
-import { GoArrowRight } from "react-icons/go";
+import Meeting from "../../Shared/Meeting/Meeting";
 
 const Contact = () => {
   return (
     <div className="pt-16">
       <div className="flex flex-col justify-center items-center gap-2">
-        <div className="flex justify-center items-center">
-          <button
-            data-cal-namespace="30min"
-            data-cal-link="shahadad/30min"
-            data-cal-config='{"layout":"month_view"}'
-            className="bg-[#171717] text-white md:px-5 px-6 md:py-4 py-3 rounded-xl flex items-center md:text-xl gap-2 cursor-pointer group transition-all duration-500 overflow-hidden border-b-4 border-r-4 border-gray-400 hover:border-white"
-          >
-            {/* Image Wrapper */}
-            <div className="w-0 h-8 flex-shrink-0 overflow-hidden transition-all duration-500 ease-out group-hover:w-8 flex items-center justify-center">
-              <img
-                className="w-8 rounded-full opacity-0 translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 ease-out"
-                src={meet}
-                alt="Meet"
-              />
-            </div>
-
-            <p>Book 1 to 1 Meeting</p>
-            <GoArrowRight className="text-2xl group-hover:scale-125  duration-500" />
-          </button>
-        </div>
-
+        <Meeting></Meeting>
         <div className="flex justify-center items-center gap-4">
           {" "}
           <div className="w-28 h-[1px] bg-black"></div>{" "}

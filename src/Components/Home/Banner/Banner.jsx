@@ -4,7 +4,7 @@ import logo from "../../../assets/logo/bg-logo.png";
 
 import { getCalApi } from "@calcom/embed-react";
 import Contact from "./Contact";
-import Highlight from "./Highlight";
+import HighlightNumber from "../../Shared/Highlight/HighlightNumber";
 
 const Banner = () => {
   useEffect(() => {
@@ -37,7 +37,7 @@ const Banner = () => {
           <img className="scale-50 h-32 object-cover" src={logo} alt="" />
         </div>
         <div className="text-center">
-          <h1 className="2xl:text-8xl lg:text-7xl md:text-6xl text-4xl text-center font-black 2xl:leading-20 lg:leading-16 md:leading-14 leading-9 tracking-tight">
+          <h1 className="2xl:text-8xl lg:text-7xl md:text-6xl text-4xl text-center font-black 2xl:leading-20 lg:leading-16 md:leading-14 leading-9 tracking-tight text-[#121212]">
             I Build Websites That <br />{" "}
             <span className="text-[#FF3737] font-black">Never</span> Break
           </h1>
@@ -48,7 +48,7 @@ const Banner = () => {
         </div>
 
         <div className="">
-          <Highlight></Highlight>
+          <HighlightNumber></HighlightNumber>
 
           {/* Book meeting */}
           <Contact></Contact>
