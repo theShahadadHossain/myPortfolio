@@ -4,7 +4,7 @@ import profile from "../../assets/banner/currentProfile.jpg";
 const AboutCard = () => {
   return (
     <div className="flex justify-start max-w-7xl mx-auto text-[#171717] w-6/12">
-      <div className="border-3 border-neutral-400 border-dashed p-5 rounded-3xl w-[500px] flex justify-center">
+      <div className="border-3 border-neutral-400 border-dotted p-5 rounded-3xl w-[500px] flex justify-center">
         <div>
           <div className="flex gap-5">
             <div>

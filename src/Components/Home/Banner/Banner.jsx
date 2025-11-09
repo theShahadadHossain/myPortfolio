@@ -36,10 +36,12 @@ const Banner = () => {
         <div className="flex justify-center">
           <img className="scale-50 h-32 object-cover" src={logo} alt="" />
         </div>
-        <div className="text-center">
-          <h1 className="2xl:text-8xl lg:text-7xl md:text-6xl text-4xl text-center font-black 2xl:leading-20 lg:leading-16 md:leading-14 leading-9 tracking-tight text-[#121212]">
-            I Build Websites That <br />{" "}
-            <span className="text-[#FF3737] font-black">Never</span> Break
+        <div className="text-center pt-14">
+          <h1 className="2xl:text-7xl lg:text-7xl md:text-6xl text-4xl text-center font-black 2xl:leading-30 lg:leading-16 md:leading-14 leading-9 tracking-tight text-[#121212] highlight-text">
+            I Build Functional,{" "}
+            <span className="text-[#FF3737] font-black"> Responsive </span>{" "}
+            <br /> Website That
+            <span className="text-[#FF3737] font-black"> Never</span> Break
           </h1>
           <p className="md:pt-4 pt-4 2xl:text-2xl md:text-lg text-sm 2xl:leading-8 md:leading-6">
             Clean Code, Responsive, Functional &
@@ -48,7 +50,7 @@ const Banner = () => {
         </div>
 
         <div className="">
-          <HighlightNumber></HighlightNumber>
+          {/* <HighlightNumber></HighlightNumber> */}
 
           {/* Book meeting */}
           <Contact></Contact>

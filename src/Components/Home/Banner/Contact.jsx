@@ -7,7 +7,7 @@ import Meeting from "../../Shared/Meeting/Meeting";
 const Contact = () => {
   return (
     <div className="pt-16">
-      <div className="flex flex-col justify-center items-center gap-2">
+      <div className="flex flex-col justify-center items-center gap-4">
         <Meeting></Meeting>
         <div className="flex justify-center items-center gap-4">
           {" "}

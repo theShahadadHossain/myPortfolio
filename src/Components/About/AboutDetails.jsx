@@ -12,7 +12,6 @@ const AboutDetails = () => {
         </h4>
       </div>
       <HighlightNumber></HighlightNumber>
-      {/* Social Icons */}
     </div>
   );
 };
