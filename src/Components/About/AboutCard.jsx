@@ -45,7 +45,7 @@ const AboutCard = () => {
           <div className="pt-10 flex justify-center gap-5 w-full">
             {" "}
             <NavLink
-              to={`https://www.facebook.com/theShahadadHossain`}
+              to={`https://www.instagram.com/theshahadadhossain/`}
               className={
                 "w-full bg-[#171717]  px-5 py-3  rounded-xl cursor-pointer text-center"
               }
@@ -53,7 +53,7 @@ const AboutCard = () => {
               <button className="text-white">Follow</button>
             </NavLink>
             <NavLink
-              to="https://wa.me/8801690103374"
+              to="https://ig.me/m/theshahadadhossain"
               className={
                 "w-full bg-[#171717]  px-5 py-3  rounded-xl cursor-pointer text-center"
               }

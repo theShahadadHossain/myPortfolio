@@ -4,6 +4,12 @@ import projectTwo from "../../assets/banner/projectTwo.jpg";
 import projectThree from "../../assets/banner/projectThree.jpg";
 import { PiFilesFill } from "react-icons/pi";
 import { NavLink } from "react-router";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import { TbExternalLink } from "react-icons/tb";
 
 const ProjectShowcase = () => {
   const projects = [
@@ -24,6 +30,7 @@ const ProjectShowcase = () => {
       ],
       liveSite: "https://leadmarketingglobal.com/",
       projectDetails: "#",
+      category: "Agency",
     },
     {
       id: 2,
@@ -38,6 +45,7 @@ const ProjectShowcase = () => {
       ],
       liveSite: "https://aschii.com/",
       projectDetails: "#",
+      category: "Courier",
     },
     {
       id: 3,
@@ -53,6 +61,7 @@ const ProjectShowcase = () => {
       ],
       liveSite: "https://guider.shahadad.com/",
       projectDetails: "#",
+      category: "Travel",
     },
     {
       id: 4,
@@ -71,127 +80,62 @@ const ProjectShowcase = () => {
       ],
       liveSite: "https://leadmarketingglobal.com/",
       projectDetails: "#",
+      category: "Agency",
     },
   ];
 
   return (
-    <div className="max-w-7xl mx-auto select-none pb-20 pt-16">
-      <section className="grid grid-cols-2 gap-12">
-        {/* <div className="bg-gray-100 p-5 rounded-2xl">
-          <div>
-            <img src={projectOne} alt="" className="rounded-xl" />
-          </div>
-          <div className="py-5">
-            <div>
-              <h3 className="text-lg font-bold text-gray-800">
-                Lead Marketing
-              </h3>
-              <p className="leading-5 py-2">
-                Lead Marketing Inc. is a full-service marketing and
-                communications agency serving worldwide from Canada. This is the
-                global venture of Lead Bangladesh Ltd., a full-service marketing
-                agency with 10 years of experience.
-              </p>
-            </div>
-            <div className="pt-4">
-              <h5 className="text-sm text-gray-800 w-1/4 text-center border-2 border-gray-800 bg-white px-2 py-2 rounded-sm">
-                Technology Used
-              </h5>
-              <ul className="flex w-full justify-between pt-4 text-wrap">
-                <li className="bg-gray-800 text-white px-4 py-2 rounded-sm cursor-pointer">
-                  Javascript
-                </li>
-                <li className="bg-gray-800 text-white px-4 py-2 rounded-sm cursor-pointer">
-                  React
-                </li>
-                <li className="bg-gray-800 text-white px-4 py-2 rounded-sm cursor-pointer">
-                  React Router
-                </li>
-                <li className="bg-gray-800 text-white px-4 py-2 rounded-sm cursor-pointer">
-                  Tailwind CSS
-                </li>
-                <li className="bg-gray-800 text-white px-4 py-2 rounded-sm cursor-pointer">
-                  Swiper JS
-                </li>
-              </ul>
-            </div>
-            <div className="pt-8 flex justify-center gap-5">
-              <NavLink to={"https://leadmarketingglobal.com/"} target="_blank">
-                <button className="text-gray-800 text-center border-2 border-gray-800 bg-white px-10 py-2 rounded-xl text-lg cursor-pointer">
-                  <span className="flex items-center justify-center gap-2">
-                    <RxGlobe className="text-xl" />
-                    Live Site
-                  </span>
-                </button>
-              </NavLink>
-              <button className="text-gray-800 text-center border-2 border-gray-800 bg-white px-10 py-2 rounded-xl text-lg cursor-pointer">
-                <span className="flex items-center justify-center gap-2">
-                  <PiFilesFill className="text-xl" />
-                  Project Details
-                </span>
-              </button>
-            </div>
-          </div>
-        </div> */}
-        {projects.map((project) => (
-          <div key={project.id} className="bg-gray-100 p-5 rounded-2xl">
-            <div>
-              <NavLink to={project.liveSite} target="_blank">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="rounded-xl"
-                />
-              </NavLink>
-            </div>
-            <div className="py-5">
-              <h3 className="text-lg font-bold text-gray-800">
-                {project.title}
-              </h3>
-              <p className="leading-5 py-2">{project.description}</p>
+    <div className="select-none pb-20 pt-16 text-[#171717]">
+      <div className="max-w-7xl mx-auto">
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          grabCursor={true}
+          pagination={{ clickable: true }}
+        >
+          {projects.map((project) => (
+            <SwiperSlide key={project.id}>
+              <div className="bg-neutral-200/60 rounded-2xl overflow-hidden transition w-2/3 mx-auto shadow-xl">
+                <div>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-[32rem]"
+                  />
+                </div>
+                <div className="p-4">
+                  <div>
+                    <h3 className="text-3xl py-4 text-center text-neutral-800 highlight-text">
+                      {project.title}
+                    </h3>
+                  </div>
+                  <div className="flex justify-around py-2">
+                    <div>
+                      <p className="border-2 border-neutral-400 rounded-full px-5 text-xl cursor-pointer py-1 backdrop-blur-2xl text-neutral-700 font-medium">
+                        Category: {project.category}
+                      </p>
+                    </div>
+                    <div>
+                      <NavLink to={project.liveSite}>
+                        <p className="flex items-center gap-3 border-2 border-neutral-400 rounded-full px-5 text-xl cursor-pointer py-1 backdrop-blur-2xl text-neutral-700  font-medium">
+                          Live View
+                          <TbExternalLink className="text-2xl" />
+                        </p>
+                      </NavLink>
+                    </div>
+                  </div>
 
-              <div className="pt-4">
-                <h5 className="text-sm text-gray-800 w-1/4 text-center border-2 border-gray-800 bg-white px-2 py-2 rounded-sm">
-                  Technology Used
-                </h5>
-                <ul className="flex w-full justify-between pt-4 text-wrap">
-                  {project.technologies.map((tech, index) => (
-                    <li
-                      key={index}
-                      className="bg-gray-800 text-white px-4 py-2 rounded-sm cursor-pointer"
-                    >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
+                  <div>
+                    <p className="text-xl text-gray-700 font-medium line-clamp-3 px-10 pb-8 pt-5">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
               </div>
-
-              <div className="pt-8 flex justify-center gap-5">
-                <NavLink
-                  to={project.liveSite}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="text-gray-800 text-center border-2 border-gray-800 bg-white px-8 py-2 rounded-full cursor-pointer">
-                    <span className="flex items-center justify-center gap-2">
-                      <RxGlobe className="text-xl" />
-                      Live Site
-                    </span>
-                  </button>
-                </NavLink>
-                {/* <NavLink to={project.projectDetails}>
-                  <button className="text-gray-800 text-center border-2 border-gray-800 bg-white px-8 py-2 rounded-full cursor-pointer">
-                    <span className="flex items-center justify-center gap-2">
-                      <PiFilesFill className="text-xl" />
-                      Project Details
-                    </span>
-                  </button>
-                </NavLink> */}
-              </div>
-            </div>
-          </div>
-        ))}
-      </section>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };

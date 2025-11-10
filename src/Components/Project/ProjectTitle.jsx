@@ -1,23 +1,25 @@
-import { FaPaperPlane } from "react-icons/fa";
-import { NavLink } from "react-router";
+import { motion } from "framer-motion";
 
 const ProjectTitle = () => {
   return (
-    <div className="max-w-7xl mx-auto select-none">
-      <h1 className="text-7xl font-black text-center uppercase leading-16 pt-28 text-gray-400">
-        your site should <span className="text-gray-800">look good</span> &{" "}
-        <br className="hidden 2xl:block" />{" "}
-        <span className="text-gray-800">performance</span> optimized
-      </h1>
-      <div className="flex justify-center py-14">
-        <NavLink to={"/contact"}>
-          <button className="px-14 py-5 bg-white rounded-xl text-gray-900 z-50 border-2 border-gray-900 cursor-pointer hover:underline">
-            <span className="flex items-center gap-2 text-lg">
-              <FaPaperPlane className="text-2xl animate-bounce" />
-              Start a project together
-            </span>
-          </button>
-        </NavLink>
+    <div className="max-w-7xl mx-auto">
+      <div className="pt-36 flex flex-col justify-center items-center">
+        <h1 className="highlight-text text-7xl font-bold">
+          My Best{" "}
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            className="text-[#FF3737] font-black inline-block"
+          >
+            <span className="text-[#398AFE]">Projects</span>
+          </motion.span>{" "}
+          {""}
+          are here
+        </h1>
+        <p className="text-2xl text-center py-10">
+          Your website should look good & performance optimized.
+        </p>
       </div>
     </div>
   );

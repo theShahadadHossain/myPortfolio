@@ -14,27 +14,11 @@ const Banner = () => {
     })();
   }, []);
 
-  // useEffect(() => {
-  //   const handleMouseMove = (event) => {
-  //     if (imgRef.current) {
-  //       imgRef.current.style.position = "absolute";
-  //       imgRef.current.style.top = event.clientX + "px";
-  //       imgRef.current.style.left = event.clientX + "px";
-  //     }
-  //   };
-
-  //   document.addEventListener("mousemove", handleMouseMove);
-
-  //   return () => {
-  //     document.addEventListener("mousemove", handleMouseMove);
-  //   };
-  // }, []);
-
   return (
     <div className="max-w-7xl mx-auto select-none text-[#171717] flex justify-center items-center">
       <div className="">
         <div className="flex justify-center">
-          <img className="scale-50 h-32 object-cover" src={logo} alt="" />
+          <img className="scale-90 h-32 object-cover" src={logo} alt="" />
         </div>
         <div className="text-center pt-14">
           <h1 className="2xl:text-7xl lg:text-7xl md:text-6xl text-4xl text-center font-black 2xl:leading-[7rem] lg:leading-[5rem] md:leading-[4rem] leading-[2.5rem] tracking-tight text-[#121212] highlight-text">

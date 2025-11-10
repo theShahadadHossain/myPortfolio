@@ -27,7 +27,6 @@ const Home = () => {
       <Banner></Banner>
       <Service></Service>
       <About></About>
-      {/* <hr className="max-w-7xl mx-auto" /> */}
     </div>
   );
 };

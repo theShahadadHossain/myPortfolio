@@ -24,7 +24,7 @@ const Footer = ({ footerRef }) => {
           <div className="w-1/2">
             {/* Social */}
             <div className="flex justify-center">
-              <h3 className="text-center text-xl font-semibold border-2 border-dotted w-1/3 rounded-2xl mb-5">
+              <h3 className="text-center text-xl border-2 border-[#171717] w-1/2 rounded-2xl mb-5">
                 DM Here
               </h3>
             </div>
