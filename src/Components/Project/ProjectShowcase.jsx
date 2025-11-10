@@ -4,11 +4,19 @@ import projectTwo from "../../assets/banner/projectTwo.jpg";
 import projectThree from "../../assets/banner/projectThree.jpg";
 import { PiFilesFill } from "react-icons/pi";
 import { NavLink } from "react-router";
-// Import Swiper React components
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/controller";
+import "./Project.css";
+
 import { TbExternalLink } from "react-icons/tb";
 
 const ProjectShowcase = () => {
@@ -88,14 +96,23 @@ const ProjectShowcase = () => {
     <div className="select-none pb-20 pt-16 text-[#171717]">
       <div className="max-w-7xl mx-auto">
         <Swiper
-          spaceBetween={30}
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
           slidesPerView={1}
-          grabCursor={true}
+          enabled={true}
+          onlyInViewport={true}
+          navigation={{
+            nextEl: ".custom-next",
+            prevEl: ".custom-prev",
+          }}
           pagination={{ clickable: true }}
+          autoplay
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
         >
           {projects.map((project) => (
-            <SwiperSlide key={project.id}>
-              <div className="bg-neutral-200/60 rounded-2xl overflow-hidden transition w-2/3 mx-auto shadow-xl">
+            <SwiperSlide key={project.id} className="relative">
+              <div className="bg-neutral-200/60 rounded-2xl overflow-hidden transition w-2/3 mx-auto shadow-xl pb-16">
                 <div>
                   <img
                     src={project.image}
@@ -112,7 +129,7 @@ const ProjectShowcase = () => {
                   <div className="flex justify-around py-2">
                     <div>
                       <p className="border-2 border-neutral-400 rounded-full px-5 text-xl cursor-pointer py-1 backdrop-blur-2xl text-neutral-700 font-medium">
-                        Category: {project.category}
+                        {project.category}
                       </p>
                     </div>
                     <div>
@@ -132,6 +149,8 @@ const ProjectShowcase = () => {
                   </div>
                 </div>
               </div>
+              <div className="custom-prev">Previous</div>
+              <div className="custom-next">Next</div>
             </SwiperSlide>
           ))}
         </Swiper>

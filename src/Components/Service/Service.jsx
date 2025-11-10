@@ -6,7 +6,7 @@ import { IoSettings } from "react-icons/io5";
 
 const Service = () => {
   return (
-    <div className="2xl:pt-52">
+    <div>
       <div className="max-w-7xl mx-auto">
         <ServiceDetails></ServiceDetails>
         <ServiceCard></ServiceCard>

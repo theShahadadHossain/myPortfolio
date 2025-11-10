@@ -25,7 +25,9 @@ const Home = () => {
   return (
     <div className="relative bg-[#F5F2EE] scroll-smooth">
       <Banner></Banner>
-      <Service></Service>
+      <div className="2xl:pt-52">
+        <Service></Service>
+      </div>
       <About></About>
     </div>
   );

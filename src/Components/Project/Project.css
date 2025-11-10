@@ -1,0 +1,68 @@
+/* ProjectShowcase.css */
+
+/* Make pagination bullets visible and customizable */
+.swiper-pagination-bullet {
+  background-color: #a3a3a3; /* neutral gray */
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  transition: all 0.5s ease;
+}
+
+/* Style for the active bullet */
+.swiper-pagination-bullet-active {
+  background-color: #171717; /* dark bullet for active slide */
+  width: 40px;
+  border-radius: 8px;
+}
+
+/* Optional: position pagination below the slider */
+.swiper-pagination {
+  bottom: 10px !important; /* adjust as needed */
+  text-align: center;
+}
+
+/* Optional hover effect */
+.swiper-pagination-bullet:hover {
+  background-color: #404040;
+  transform: scale(1.2);
+}
+
+.custom-prev,
+.custom-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #171717;
+  color: white;
+  width: 140px;
+  /* height: 44px; */
+  padding: 3px 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  gap: 5px;
+}
+
+.custom-prev:hover,
+.custom-next:hover {
+  background: #171717;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.custom-prev {
+  top: 795px;
+  right: 650px;
+}
+
+.custom-next {
+  top: 795px;
+  right: 490px;
+}
