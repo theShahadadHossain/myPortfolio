@@ -5,7 +5,7 @@ import AboutTitle from "./AboutTitle";
 
 const About = () => {
   return (
-    <div className="2xl:pt-36 pb-60">
+    <div className="2xl:py-36">
       <AboutTitle></AboutTitle>
       <div className="max-w-7xl mx-auto flex justify-center items-center gap-2 pt-16">
         <AboutCard></AboutCard>

@@ -42,7 +42,7 @@ const Banner = () => {
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
               className="text-[#FF3737] font-black inline-block"
             >
               Responsive
@@ -52,7 +52,7 @@ const Banner = () => {
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
               className="text-[#398AFE] font-black inline-block"
             >
               Never

@@ -1,7 +1,7 @@
 import { GoArrowRight } from "react-icons/go";
 import meet from "../../../assets/banner/googlemeet.png";
 
-const Meeting = ({ name }) => {
+const Meeting = () => {
   return (
     <div className="flex justify-center items-center">
       <button

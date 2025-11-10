@@ -24,10 +24,10 @@ const Home = () => {
 
   return (
     <div className="relative bg-[#F5F2EE] scroll-smooth">
-      {/* <Navbar></Navbar> */}
       <Banner></Banner>
       <Service></Service>
       <About></About>
+      {/* <hr className="max-w-7xl mx-auto" /> */}
     </div>
   );
 };
