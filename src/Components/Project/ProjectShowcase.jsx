@@ -93,8 +93,8 @@ const ProjectShowcase = () => {
   ];
 
   return (
-    <div className="select-none pb-20 pt-16 text-[#171717]">
-      <div className="max-w-7xl mx-auto">
+    <div className="select-none pb-20 pt-16 text-[#171717] px-2 rounded-2xl">
+      <div className="xl:max-w-7xl mx-auto rounded-2xl">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
@@ -107,34 +107,33 @@ const ProjectShowcase = () => {
           }}
           pagination={{ clickable: true }}
           autoplay
-          // onSwiper={(swiper) => console.log(swiper)}
-          // onSlideChange={() => console.log("slide change")}
+          className="rounded-2xl"
         >
           {projects.map((project) => (
             <SwiperSlide key={project.id} className="relative">
-              <div className="bg-neutral-200/60 rounded-2xl overflow-hidden transition w-2/3 mx-auto shadow-xl pb-16">
+              <div className="bg-neutral-200/60 rounded-2xl overflow-hidden transition xl:w-8/12 lg:w-9/12 md:w-10/12 w-full mx-auto shadow-xl pb-16">
                 <div>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-[32rem]"
+                    className="w-full xl:h-[32rem] md:h-fit"
                   />
                 </div>
                 <div className="p-4">
                   <div>
-                    <h3 className="text-3xl py-4 text-center text-neutral-800 highlight-text">
+                    <h3 className="md:text-3xl text-xl py-4 text-center text-neutral-800 highlight-text">
                       {project.title}
                     </h3>
                   </div>
-                  <div className="flex justify-around py-2">
+                  <div className="flex md:justify-around justify-between py-2">
                     <div>
-                      <p className="border-2 border-neutral-400 rounded-full px-5 text-xl cursor-pointer py-1 backdrop-blur-2xl text-neutral-700 font-medium">
+                      <p className="border-2 border-neutral-400 rounded-full px-5 md:text-xl cursor-pointer py-1 backdrop-blur-2xl text-neutral-700 font-medium">
                         {project.category}
                       </p>
                     </div>
                     <div>
                       <NavLink to={project.liveSite}>
-                        <p className="flex items-center gap-3 border-2 border-neutral-400 rounded-full px-5 text-xl cursor-pointer py-1 backdrop-blur-2xl text-neutral-700  font-medium">
+                        <p className="flex items-center gap-3 border-2 border-neutral-400 rounded-full px-5 md:text-xl cursor-pointer py-1 backdrop-blur-2xl text-neutral-700  font-medium">
                           Live View
                           <TbExternalLink className="text-2xl" />
                         </p>
@@ -143,7 +142,7 @@ const ProjectShowcase = () => {
                   </div>
 
                   <div>
-                    <p className="text-xl text-gray-700 font-medium line-clamp-3 px-10 pb-8 pt-5">
+                    <p className="text-xl text-gray-700 font-medium line-clamp-3 md:px-10 pb-8 pt-5">
                       {project.description}
                     </p>
                   </div>

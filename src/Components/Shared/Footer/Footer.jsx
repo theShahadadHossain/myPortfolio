@@ -9,22 +9,25 @@ const Footer = ({ footerRef }) => {
   const year = new Date().getFullYear();
 
   return (
-    <div ref={footerRef} className="max-w-7xl mx-auto py-4">
-      <div className="flex items-center justify-between w-full">
-        <div className="w-1/2 object-cover">
-          <img className="w-60" src={logo} alt="" />
-          <p className="text-xl">
+    <div
+      ref={footerRef}
+      className="max-w-7xl mx-auto lg:py-4 md:pt-14 pt-10 px-4 md:pb-0"
+    >
+      <div className="flex md:flex-row flex-col items-center justify-between w-full md:gap-0 gap-10">
+        <div className="lg:w-1/2 md:w-6/12 w-full object-cover">
+          <img className="w-60 mx-auto" src={logo} alt="" />
+          <p className="text-xl text-center md:text-start">
             I build Clean Coded, Responsive, Functional websites to grow your
             business. Powered by the latest frontend frameworks and best
             development practices. Helping you stand out online and connect with
             more customers.
           </p>
         </div>
-        <div className="w-1/2 flex justify-end">
-          <div className="w-1/2">
+        <div className="lg:w-1/2 md:w-6/12 w-full flex md:justify-end justify-center">
+          <div className="lg:w-1/2 w-full">
             {/* Social */}
             <div className="flex justify-center">
-              <h3 className="text-center text-xl border-2 border-[#171717] w-1/2 rounded-2xl mb-5">
+              <h3 className="text-center text-xl md:border-2 border-1 border-[#171717] md:w-1/2 w-2/3 rounded-2xl mb-5">
                 DM Here
               </h3>
             </div>

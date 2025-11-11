@@ -66,3 +66,6 @@
   top: 795px;
   right: 490px;
 }
+
+@media (min-width: 321px) and (max-width: 430px) {
+}

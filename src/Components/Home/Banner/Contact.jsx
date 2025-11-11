@@ -24,9 +24,9 @@ const Contact = () => {
         >
           <div className="flex justify-center items-center gap-4">
             {" "}
-            <div className="w-28 h-[1px] bg-black"></div>{" "}
+            <div className="md:w-28 w-16 h-[1px] bg-black"></div>{" "}
             <h3 className="text-center text-lg font-medium">OR - DM Me</h3>{" "}
-            <div className="w-28 h-[1px] bg-black"></div>{" "}
+            <div className="md:w-28 w-16 h-[1px] bg-black"></div>{" "}
           </div>
         </motion.span>
 

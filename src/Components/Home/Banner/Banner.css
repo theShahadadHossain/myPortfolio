@@ -1,3 +1,59 @@
 .highlight-text {
   font-family: "Boldonse", system-ui;
 }
+@media (max-width: 330px) {
+  .home-title {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+}
+
+@media (min-width: 331px) and (max-width: 350px) {
+  .home-title {
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+  }
+}
+
+@media (min-width: 351px) and (max-width: 375px) {
+  .home-title {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 420px) {
+  .home-title {
+    font-size: 1.9rem;
+    line-height: 3rem;
+  }
+}
+
+@media (min-width: 421px) and (max-width: 450px) {
+  .home-title {
+    font-size: 2.1rem;
+    line-height: 3.3rem;
+  }
+}
+
+@media (min-width: 451px) and (max-width: 500px) {
+  .home-title {
+    font-size: 2.3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 767px) {
+  .home-title {
+    font-size: 2.5rem;
+    line-height: 3.8rem;
+    padding: 4px;
+  }
+}
+
+/* @media (min-width: 601px) and (max-width: 767px) {
+  .home-title {
+    font-size: 2.5rem;
+    line-height: 3.8rem;
+  }
+} */

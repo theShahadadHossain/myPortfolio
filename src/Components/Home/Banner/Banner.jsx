@@ -1,27 +1,22 @@
 import "./Banner.css";
-import { useEffect } from "react";
 import logo from "../../../assets/logo/bg-logo.png";
 
-import { getCalApi } from "@calcom/embed-react";
 import Contact from "./Contact";
 import { motion } from "framer-motion";
 
 const Banner = () => {
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({ namespace: "30min" });
-      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
-    })();
-  }, []);
-
   return (
     <div className="max-w-7xl mx-auto select-none text-[#171717] flex justify-center items-center">
       <div className="">
         <div className="flex justify-center">
-          <img className="scale-90 h-32 object-cover" src={logo} alt="" />
+          <img
+            className="scale-90 md:h-32 h-20 object-cover"
+            src={logo}
+            alt=""
+          />
         </div>
-        <div className="text-center pt-14">
-          <h1 className="2xl:text-7xl lg:text-7xl md:text-6xl text-4xl text-center font-black 2xl:leading-[7rem] lg:leading-[5rem] md:leading-[4rem] leading-[2.5rem] tracking-tight text-[#121212] highlight-text">
+        <div className="text-center 2xl:pt-14 md:pt-5 pt-10 title-container">
+          <h1 className="2xl:text-7xl xl:text-[4rem] lg:text-[3rem] md:text-[2.6rem] text-center font-black 2xl:leading-[7rem] xl:leading-[6.5rem] lg:leading-[5rem] md:leading-[4.4rem] leading-[2.5rem] tracking-tight text-[#121212] highlight-text home-title">
             I Build Functional,{" "}
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -31,7 +26,7 @@ const Banner = () => {
             >
               Responsive
             </motion.span>{" "}
-            <br />
+            <br className="md:block hidden" />
             Website That{" "}
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -43,16 +38,13 @@ const Banner = () => {
             </motion.span>{" "}
             Break
           </h1>
-          <p className="md:pt-4 pt-4 2xl:text-2xl md:text-lg text-sm 2xl:leading-8 md:leading-6">
+          <p className="md:pt-4 pt-4 2xl:text-2xl md:text-lg 2xl:leading-8 md:leading-6">
             Clean Code, Responsive, Functional &
             <br /> High-performing websites designed to grow your business.
           </p>
         </div>
 
         <div className="">
-          {/* <HighlightNumber></HighlightNumber> */}
-
-          {/* Book meeting */}
           <Contact></Contact>
         </div>
       </div>

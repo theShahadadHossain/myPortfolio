@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const ProjectTitle = () => {
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="pt-36 flex flex-col justify-center items-center">
-        <h1 className="highlight-text text-7xl font-bold">
+    <div className="md:max-w-7xl mx-auto">
+      <div className="md:pt-36 pt-20">
+        <h1 className="highlight-text lg:text-[3rem] md:text-5xl text-4xl font-bold text-center leading-13">
           My Best{" "}
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -17,10 +17,10 @@ const ProjectTitle = () => {
           {""}
           are here
         </h1>
-        <p className="text-2xl text-center py-10">
-          Your website should look good & performance optimized.
-        </p>
       </div>
+      <p className="md:text-xl text-lg text-center lg:pt-6 md:py-10 pt-5">
+        Your website should look good & performance optimized.
+      </p>
     </div>
   );
 };

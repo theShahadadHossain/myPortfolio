@@ -16,8 +16,8 @@ const Navbar = ({ isFooterInView }) => {
       transition={{ duration: 0.6, ease: "easeInOut" }}
     >
       <div className="flex justify-center items-center">
-        <nav className="fixed 2xl:bottom-14 xl:bottom-16 md:bottom-14 bottom-12 z-10">
-          <ul className="relative flex items-center px-1 py-1 rounded-2xl text-lg font-medium bg-[#171717]">
+        <nav className="fixed 2xl:bottom-14 bottom-12 z-10 shadow-2xl">
+          <ul className="relative flex items-center px-1 py-1 rounded-2xl text-lg font-medium bg-[#398AFE]">
             {links.map((link) => {
               const isActive = location.pathname === link.path;
               return (
@@ -30,7 +30,7 @@ const Navbar = ({ isFooterInView }) => {
                     {isActive && (
                       <motion.div
                         layoutId="active-pill"
-                        className="absolute inset-0 bg-white/90 rounded-xl"
+                        className="absolute inset-0 bg-white rounded-xl"
                         transition={{
                           type: "spring",
                           stiffness: 350,
